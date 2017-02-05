@@ -15,6 +15,7 @@
                     </a>
 
                     <cart-dropdown></cart-dropdown>
+                   
                 </div>
             </nav>
 
@@ -25,6 +26,9 @@
     class PageHeader {
         constructor() {
             this.template = TEMPLATE;
+            this.constructor = function() {
+
+            }
         }
     }
 
