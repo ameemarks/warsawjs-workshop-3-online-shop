@@ -25,8 +25,9 @@
                     return this.products[index];
                 };
 
-                this.onProductDelete = (product) => {
-                    console.log('delete', product);
+                this.onProductDelete = (product, index) => {
+                    console.log('delete', product, index);
+                    this.products.splice(index, 1);
                 };
 
                 this.onProductClick = (product) => {

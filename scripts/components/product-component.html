@@ -7,7 +7,7 @@
         <p>{{ $ctrl.product.description }}</p>
     </div>
     <div class="card-action">
-        <product-add-to-cart></product-add-to-cart>
-        <button class="btn" ng-click="$ctrl.onDelete({$product: $ctrl.product}); $event.stopPropagation();">delete</button>
+        <button class="btn" ng-click="$ctrl.$addToCart($ctrl.product); $event.stopPropagation();">kup</button>
+        <button class="btn" ng-click="$ctrl.onDelete({$product: $ctrl.product}); $event.stopPropagation()">usuń</button>
     </div>
 </div>

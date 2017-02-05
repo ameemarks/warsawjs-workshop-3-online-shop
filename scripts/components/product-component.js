@@ -17,11 +17,17 @@
                 productList: '^^'
             };
 
-            this.controller = function() {
+            this.controller = function(CartService) {
                 this.product = null;
+                this.cartService = CartService;
 
                 this.$onInit = () => {
                     //this.product = this.productList.getProductByIndex(this.productIndex);
+                };
+
+                this.$addToCart = (product) => {
+                    console.log('product', product);
+                    console.log('service');
                 }
 
             };
