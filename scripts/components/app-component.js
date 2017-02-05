@@ -8,13 +8,11 @@
         constructor() {
             this.templateUrl = '/scripts/components/app-component.html';
             //this.controller = AppController;
-            this.controller = function () {
+            this.controller = function (ProductsService) {
                 this.title = 'Witamy na WarsawJS';
-                this.products = [
-                    {id: 1, name: 'rower gorski'},
-                    {id: 2, name: 'kask'},
-                    {id: 3, name: 'manetki'}
-                ];
+                ProductsService.$get().then(products => {   //usługa z pliku products-service
+                    this.products = products;
+                });
                 this.onTitleClick = function () {
                     console.log("clicked");
                 }
